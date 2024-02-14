@@ -16,7 +16,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">2</span>
-            <Link href="/">Random Color</Link>
+            <Link href="/random-color">Random Color</Link>
           </li>
           <li>
             <span className="num">3</span>

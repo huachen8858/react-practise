@@ -1,6 +1,6 @@
 React practise project
-- 01 Accordian (indexOf,array.push/map,splice)
-- 
+- 01 Accordian (use indexOf,array.push/map,splice ...)
+- 02 Random Color (HEX & RGB)
 
 
 --------------
