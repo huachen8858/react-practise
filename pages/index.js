@@ -24,7 +24,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">4</span>
-            <Link href="/">Image Slider</Link>
+            <Link href="/image-slider">Image Slider</Link>
           </li>
           <li>
             <span className="num">5</span>

@@ -1,6 +1,8 @@
 React practise project
 - 01 Accordian (use indexOf,array.push/map,splice ...)
 - 02 Random Color (HEX & RGB)
+- 03 Star Rating (Half Star)
+- 04 Images Slider
 
 
 --------------
