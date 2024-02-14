@@ -28,7 +28,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">5</span>
-            <Link href="/">Nested Tree View</Link>
+            <Link href="/tree-view">Nested Tree View</Link>
           </li>
           <li>
             <span className="num">6</span>
