@@ -1,5 +1,5 @@
 React practise project
-- Accordian
+- 01 Accordian (indexOf,array.push/map,splice)
 - 
 
 

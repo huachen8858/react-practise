@@ -33,10 +33,9 @@ a {
   background-color: #70a0ae;
 }
 .myProjects{
+  width: 380px;
   list-style: none;
-  padding: 20px 0;
   font-size: 20px;
-
   letter-spacing: 2px;
 }
 .myProjects li {
@@ -49,6 +48,13 @@ a {
   justify-content: flex-start;
   align-items: center;
   color: #505354;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.myProjects li:hover {
+  background-color: rgb(0, 99, 165);
+  color: #fff;
+  margin-left: 10px;
 }
 .myProjects .num {
   width: 80px;
