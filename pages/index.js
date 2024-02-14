@@ -20,7 +20,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">3</span>
-            <Link href="/">Star Rating</Link>
+            <Link href="/star-rating">Star Rating</Link>
           </li>
           <li>
             <span className="num">4</span>

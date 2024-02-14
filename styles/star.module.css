@@ -1,0 +1,18 @@
+.star-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.linear-gradient-template {
+  width: 0;
+  height: 0;
+}
+.text {
+  letter-spacing: 2px;
+  font-size: 20px;
+}
