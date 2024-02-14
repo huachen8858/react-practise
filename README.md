@@ -3,6 +3,12 @@ React practise project
 - 02 Random Color (HEX & RGB)
 - 03 Star Rating (Half Star)
 - 04 Images Slider
+- 05 Nested Tree View
+- 06 QR code Generator
+- 07 Theme Color
+- 08 GitHub Profile Search
+- 09 Tic Tac Toe
+- 10 Load More Data
 
 
 --------------

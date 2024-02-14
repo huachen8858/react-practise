@@ -48,7 +48,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">10</span>
-            <Link href="/">Load More Data</Link>
+            <Link href="/load-more-data">Load More Data</Link>
           </li>
         </ul>
       </main>
