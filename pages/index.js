@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ProjectsPage() {
   return (
     <>
-      <header className="title">
+      <header className="myTitle">
         <p>- 2024 -</p>
         <h1>Hua&prime;s React Practise</h1>
       </header>
