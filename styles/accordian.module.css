@@ -5,20 +5,24 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
   letter-spacing: 1px;
 }
-.wrapper span {
+.wrapper button {
     padding: 10px 20px;
-    background: #6a97bf;
+    background: #ffc180;
     color: #fff;
-    font-weight: bold;
-    font-size: 20px;
+    font-size: 14px;
     cursor: pointer;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 1px;
 }
 
 .page-title {
   color: #002054;
-  margin-bottom: 40px;
+  letter-spacing: 2px;
 }
 
 .accordian {
