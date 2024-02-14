@@ -36,7 +36,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">7</span>
-            <Link href="/">Theme Color</Link>
+            <Link href="/theme-color">Theme Color</Link>
           </li>
           <li>
             <span className="num">8</span>

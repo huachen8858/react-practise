@@ -5,7 +5,7 @@ React practise project
 - 04 Images Slider
 - 05 Nested Tree View
 - 06 QR code Generator (react-qr-code)
-- 07 Theme Color
+- 07 Theme Color (useLocalStorage & data-theme)
 - 08 GitHub Profile Search
 - 09 Tic Tac Toe
 - 10 Load More Data
