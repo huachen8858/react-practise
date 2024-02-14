@@ -32,7 +32,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">6</span>
-            <Link href="/">QR code Generator</Link>
+            <Link href="/qr-code-generator">QR code Generator</Link>
           </li>
           <li>
             <span className="num">7</span>

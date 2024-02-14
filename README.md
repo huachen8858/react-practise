@@ -4,7 +4,7 @@ React practise project
 - 03 Star Rating (Half Star)
 - 04 Images Slider
 - 05 Nested Tree View
-- 06 QR code Generator
+- 06 QR code Generator (react-qr-code)
 - 07 Theme Color
 - 08 GitHub Profile Search
 - 09 Tic Tac Toe
