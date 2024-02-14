@@ -40,7 +40,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">8</span>
-            <Link href="/">GitHub Profile Search</Link>
+            <Link href="/github-profile-search">GitHub Profile Search</Link>
           </li>
           <li>
             <span className="num">9</span>
