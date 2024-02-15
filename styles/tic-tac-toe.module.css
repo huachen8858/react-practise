@@ -1,0 +1,41 @@
+.tic-tac-toe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.game-title {
+  color: rgb(13, 105, 162);
+  margin-bottom: 40px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  padding: 0px;
+  font-size: 40px;
+  text-align: center;
+  margin-right: -1px;
+  margin-top: -1px;
+  border: 1px solid rgb(87, 165, 214);
+  cursor: pointer;
+  background-color: #ededed;
+  float: left;
+}
+
+.status {
+  margin: 40px 0;
+  letter-spacing: 2px;
+  color: #333;
+}
+.restart-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(13, 105, 162);
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 16px;
+}

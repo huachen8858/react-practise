@@ -44,7 +44,7 @@ export default function ProjectsPage() {
           </li>
           <li>
             <span className="num">9</span>
-            <Link href="/">Tic Tac Toe</Link>
+            <Link href="/tic-tac-toe">Tic Tac Toe</Link>
           </li>
           <li>
             <span className="num">10</span>

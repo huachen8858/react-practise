@@ -10,6 +10,7 @@ React practise project
 - 09 Tic Tac Toe
 - 10 Load More Data
 
+2024/02 completed
 
 --------------
 
