@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/accordian.module.css";
 import accordianData from "@/data/accordian-data";
+import Back from "@/components/back";
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
@@ -73,6 +74,7 @@ export default function Accordian() {
           <div>Data Not Found !</div>
         )}
       </div>
+      <Back />
     </div>
   );
 }

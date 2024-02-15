@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "@/styles/theme-color.module.css";
 import useLocalStroage from "@/hooks/use-localStorage";
+import Back from "@/components/back";
 
 export default function LightDarkMode() {
   const [theme, setTheme] = useLocalStroage("theme", "dark");
@@ -14,6 +15,7 @@ export default function LightDarkMode() {
       <div className={styles["container"]}>
         <p>Hello World !</p>
         <button onClick={handleToggleTheme}>Change Theme</button>
+        <Back/>
       </div>
     </div>
   );

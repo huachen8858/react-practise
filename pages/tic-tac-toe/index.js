@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "@/styles/tic-tac-toe.module.css";
+import Back from "@/components/back";
 
 // 先建立一個方塊fn，接收value 和 onClick fn
 const Square = ({ value, onClick }) => {
@@ -151,6 +152,7 @@ export default function TicTacToe() {
       <button onClick={handleRestart} className={styles["restart-btn"]}>
         Restart
       </button>
+      <Back />
     </div>
   );
 }

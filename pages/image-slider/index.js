@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/image-slider.module.css";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import Back from "@/components/back";
 
 export default function ImageSlider() {
   const [images, setImages] = useState([]);
@@ -33,7 +34,7 @@ export default function ImageSlider() {
   };
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     if (images) fetchImages();
     // console.log(images);
   }, []);
@@ -46,50 +47,55 @@ export default function ImageSlider() {
       {loading ? (
         <div className={styles["slider-container"]}>Loading Data ...</div>
       ) : (
-        <div className={styles["slider-container"]}>
-          <div onClick={handlePrevious} className={styles["arrow-left"]}>
-            <BsArrowLeftCircleFill size={20} />
+        <>
+          <div style={{ padding: "20px" }}>
+            <Back />
           </div>
-          {images && images.length
-            ? images.map((imageItem, index) => {
-                return (
-                  <img
-                    key={imageItem.id}
-                    src={imageItem.download_url}
-                    alt={imageItem.download_url}
-                    className={
-                      currentSlide === index
-                        ? styles["current-image"]
-                        : `${styles["current-image"]} ${styles["hide-current-image"]}`
-                    }
-                  />
-                );
-              })
-            : null}
-          <div onClick={handleNext} className={styles["arrow-right"]}>
-            <BsArrowRightCircleFill size={20} />
-          </div>
-
-          <span className={styles["circle-indicators"]}>
+          <div className={styles["slider-container"]}>
+            <div onClick={handlePrevious} className={styles["arrow-left"]}>
+              <BsArrowLeftCircleFill size={20} />
+            </div>
             {images && images.length
-              ? images.map((v, index) => {
+              ? images.map((imageItem, index) => {
                   return (
-                    <button
-                      key={index}
+                    <img
+                      key={imageItem.id}
+                      src={imageItem.download_url}
+                      alt={imageItem.download_url}
                       className={
                         currentSlide === index
-                          ? styles["current-indicator"]
-                          : `${styles["current-indicator"]} ${styles["inactive-indicator"]}`
+                          ? styles["current-image"]
+                          : `${styles["current-image"]} ${styles["hide-current-image"]}`
                       }
-                      onClick={() => {
-                        setCurrentSlide(index);
-                      }}
-                    ></button>
+                    />
                   );
                 })
               : null}
-          </span>
-        </div>
+            <div onClick={handleNext} className={styles["arrow-right"]}>
+              <BsArrowRightCircleFill size={20} />
+            </div>
+
+            <span className={styles["circle-indicators"]}>
+              {images && images.length
+                ? images.map((v, index) => {
+                    return (
+                      <button
+                        key={index}
+                        className={
+                          currentSlide === index
+                            ? styles["current-indicator"]
+                            : `${styles["current-indicator"]} ${styles["inactive-indicator"]}`
+                        }
+                        onClick={() => {
+                          setCurrentSlide(index);
+                        }}
+                      ></button>
+                    );
+                  })
+                : null}
+            </span>
+          </div>
+        </>
       )}
     </>
   );

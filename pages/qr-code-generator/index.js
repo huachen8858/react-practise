@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import QRCode from "react-qr-code";
 import styles from '@/styles/qr-code-generator.module.css'
+import Back from "@/components/back";
 
 export default function QRCodeGenerator() {
   const [qrCode, setQrcode] = useState("");
@@ -32,6 +33,7 @@ export default function QRCodeGenerator() {
       <div>
         <QRCode id="qr-code-value" value={qrCode} size={400} bgColor="#fff" />
       </div>
+      <Back/>
     </div>
   );
 }

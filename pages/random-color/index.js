@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/random-color.module.css";
+import Back from "@/components/back";
 
 export default function RandomColor() {
   const [typeOfColor, setTypeOfColor] = useState("hex");
@@ -33,37 +34,42 @@ export default function RandomColor() {
   }, [typeOfColor]);
 
   return (
-    <div
-      style={{ width: "100vw", height: "100vh", backgroundColor: color }}
-      className={styles["box"]}
-    >
-      <button
-        onClick={() => {
-          setTypeOfColor("hex");
-        }}
-      >
-        Create HEX Color
-      </button>
-      <button
-        onClick={() => {
-          setTypeOfColor("rgb");
-        }}
-      >
-        Create RGB Color
-      </button>
-      <button
-        onClick={
-          typeOfColor === "hex"
-            ? handleCreateRandomHexColor
-            : handleCreateRandomRgbColor
-        }
-      >
-        Generate Random Color
-      </button>
-      <div className={styles["color-text"]}>
-        <h3>{typeOfColor === "hex" ? "HEX Color" : "RGB Color"}</h3>
-        <h1>{color}</h1>
+    <>
+      <div style={{ backgroundColor: color, padding: "5px 0 0 5px" }}>
+        <Back />
       </div>
-    </div>
+      <div
+        style={{ width: "100vw", height: "100vh", backgroundColor: color }}
+        className={styles["box"]}
+      >
+        <button
+          onClick={() => {
+            setTypeOfColor("hex");
+          }}
+        >
+          Create HEX Color
+        </button>
+        <button
+          onClick={() => {
+            setTypeOfColor("rgb");
+          }}
+        >
+          Create RGB Color
+        </button>
+        <button
+          onClick={
+            typeOfColor === "hex"
+              ? handleCreateRandomHexColor
+              : handleCreateRandomRgbColor
+          }
+        >
+          Generate Random Color
+        </button>
+        <div className={styles["color-text"]}>
+          <h3>{typeOfColor === "hex" ? "HEX Color" : "RGB Color"}</h3>
+          <h1>{color}</h1>
+        </div>
+      </div>
+    </>
   );
 }

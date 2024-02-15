@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/github-profile-search.module.css";
 import User from "./user";
+import Back from "@/components/back";
 
 export default function GithubProfileSearch() {
   const [userName, setUserName] = useState("huachen8858");
@@ -32,9 +33,14 @@ export default function GithubProfileSearch() {
   return (
     <>
       {loading ? (
-        <h1 style={{display: "flex", justifyContent: "center"}}>Loading data ! Please wait</h1>
+        <h1 style={{ display: "flex", justifyContent: "center" }}>
+          Loading data ! Please wait
+        </h1>
       ) : (
         <>
+          <div style={{ marginTop: "40px" }}>
+            <Back />
+          </div>
           <div className={styles["github-profile-container"]}>
             <div className={styles["input-wrapper"]}>
               <input

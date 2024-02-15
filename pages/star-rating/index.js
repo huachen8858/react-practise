@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "@/styles/star.module.css";
 import { FaStar } from "react-icons/fa";
+import Back from "@/components/back";
 
 export default function StarRating() {
   const [rating, setRating] = useState(0);
@@ -112,6 +113,7 @@ export default function StarRating() {
         <div className={styles['text']}>正在評: {hover ? hover : 0} 分</div>
         <div className={styles['text']}>已評分: {rating} 分</div>
         <div>(雙擊星星可復原)</div>
+        <Back/>
       </div>
     </>
   );

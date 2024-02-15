@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/load-more-data.module.css";
+import Back from "@/components/back";
 
 export default function LoadMoreData() {
   const [products, setProducts] = useState([]);
@@ -43,6 +44,7 @@ export default function LoadMoreData() {
         <div>Loading data ...</div>
       ) : (
         <div className={styles["load-more-container"]}>
+        <Back />
           <h1>Products</h1>
           <div className={styles["product-container"]}>
             {products && products.length
