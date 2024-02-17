@@ -38,16 +38,16 @@ export default function ProjectsPage() {
             <span className="num">7</span>
             <Link href="/theme-color">Theme Color</Link>
           </li>
-          <li>
+          {/* <li>
             <span className="num">8</span>
             <Link href="/github-profile-search">GitHub Profile Search</Link>
-          </li>
+          </li> */}
           <li>
-            <span className="num">9</span>
+            <span className="num">8</span>
             <Link href="/tic-tac-toe">Tic Tac Toe</Link>
           </li>
           <li>
-            <span className="num">10</span>
+            <span className="num">9</span>
             <Link href="/load-more-data">Load More Data</Link>
           </li>
         </ul>

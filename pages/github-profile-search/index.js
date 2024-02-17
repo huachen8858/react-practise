@@ -8,19 +8,19 @@ export default function GithubProfileSearch() {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const fetchGithubUserData = async () => {
-    try {
-      const response = await fetch(`https://api.github.com/users/${userName}`);
-      const data = await response.json();
-      if (data) {
-        setUserData(data);
-        setLoading(false);
-        setUserName("");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const fetchGithubUserData = async () => {
+  //   try {
+  //     const response = await fetch(`https://api.github.com/users/${userName}`);
+  //     const data = await response.json();
+  //     if (data) {
+  //       setUserData(data);
+  //       setLoading(false);
+  //       setUserName("");
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const handleSubmit = () => {
     fetchGithubUserData();
