@@ -74,3 +74,51 @@ a {
   padding: 10px 20px;
   text-align: center;
 }
+
+
+/* theme */
+
+.light-highlight {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  transition: all 0.5s;
+  color: #fdb813;
+}
+
+.dark-highlight {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  transition: all 0.5s;
+  color: #ffffff;
+  background-color: #121212;
+}
+
+.switch-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 35px;
+  padding-left: 10px;
+}
+
+.switch-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 35px;
+  padding-left: 10px;
+  position: relative;
+  left: 20px;
+}
