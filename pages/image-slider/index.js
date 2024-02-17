@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "@/styles/image-slider.module.css";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import Back from "@/components/back";
-import sliderData from '@/data/slider-data'
+import sliderData from "@/data/slider-data";
+import Image from "next/image";
 
 export default function ImageSlider() {
   // const [images, setImages] = useState([]);
@@ -34,10 +35,14 @@ export default function ImageSlider() {
   // };
 
   const handlePrevious = () => {
-    setCurrentSlide(currentSlide === 0 ? sliderData.length - 1 : currentSlide - 1);
+    setCurrentSlide(
+      currentSlide === 0 ? sliderData.length - 1 : currentSlide - 1
+    );
   };
   const handleNext = () => {
-    setCurrentSlide(currentSlide === sliderData.length - 1 ? 0 : currentSlide + 1);
+    setCurrentSlide(
+      currentSlide === sliderData.length - 1 ? 0 : currentSlide + 1
+    );
   };
 
   // useEffect(() => {
@@ -62,9 +67,10 @@ export default function ImageSlider() {
             <div onClick={handlePrevious} className={styles["arrow-left"]}>
               <BsArrowLeftCircleFill size={20} />
             </div>
-            {sliderData ? sliderData.map((slider, index) => {
-              return (
-                <img
+            {sliderData
+              ? sliderData.map((slider, index) => {
+                  return (
+                    <Image
                       key={slider.id}
                       src={"/images/" + slider.image}
                       className={
@@ -73,8 +79,9 @@ export default function ImageSlider() {
                           : `${styles["current-image"]} ${styles["hide-current-image"]}`
                       }
                     />
-              )
-            }): null}
+                  );
+                })
+              : null}
             {/* {images && images.length
               ? images.map((imageItem, index) => {
                   return (
@@ -95,9 +102,10 @@ export default function ImageSlider() {
             </div>
 
             <span className={styles["circle-indicators"]}>
-            {sliderData ? sliderData.map((slider, index) => {
-              return (
-                <button
+              {sliderData
+                ? sliderData.map((slider, index) => {
+                    return (
+                      <button
                         key={index}
                         className={
                           currentSlide === index
@@ -108,8 +116,9 @@ export default function ImageSlider() {
                           setCurrentSlide(index);
                         }}
                       ></button>
-              )
-            }): null}
+                    );
+                  })
+                : null}
               {/* {images && images.length
                 ? images.map((v, index) => {
                     return (

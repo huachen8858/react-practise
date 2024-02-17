@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/styles/load-more-data.module.css";
 import Back from "@/components/back";
+import Image from "next/image";
 
 export default function LoadMoreData() {
   const [products, setProducts] = useState([]);
@@ -51,7 +52,7 @@ export default function LoadMoreData() {
               ? products.map((item) => {
                   return (
                     <div className={styles["product"]} key={item.id}>
-                      <img src={item.thumbnail} alt={item.title} />
+                      <Image src={item.thumbnail} alt={item.title} />
                       <p>{item.title}</p>
                     </div>
                   );

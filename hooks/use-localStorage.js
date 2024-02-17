@@ -5,17 +5,23 @@ export default function useLocalStroage(key, defaultValue) {
     let currentValue
 
     try {
-      currentValue = JSON.parse(localStorage.getItem(key) || String(defaultValue))
+      if (typeof window !== 'undefined') {
+        currentValue = JSON.parse(localStorage.getItem(key) || String(defaultValue));
+      } else {
+        currentValue = defaultValue;
+      }
     } catch (ex) {
       console.log(ex);
-      currentValue = defaultValue
+      currentValue = defaultValue;
     }
 
     return currentValue
   })
 
   useEffect(()=>{
-    localStorage.setItem(key, JSON.stringify(value))
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(key, JSON.stringify(value));
+    }
   }, [key, value])
 
   return [value, setValue]

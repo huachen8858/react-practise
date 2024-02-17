@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/github-profile-search.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function User({ user }) {
   const {
@@ -19,7 +20,7 @@ export default function User({ user }) {
   return (
     <div className={styles["user"]}>
       <div>
-        <img src={avatar_url} className={styles["avatar"]} alt="User" />
+        <Image src={avatar_url} className={styles["avatar"]} alt="User" />
       </div>
       <div className={styles["name-container"]}>
         <Link href={`https://github.com/${login}`}>{name || login}</Link>
