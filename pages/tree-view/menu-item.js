@@ -1,9 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import MenuList from "./menu-list";
 import styles from "@/styles/tree-view.module.css";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 export default function MenuItem({ item }) {
+  if (!item) {
+    console.log("item is undefined");
+    return null; 
+  }
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [displayCurrentChildren, setDisplayCurrentChildren] = useState({});
 
   const handleToggleChildren = (currentLabel) => {

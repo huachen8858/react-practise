@@ -41,7 +41,7 @@ export default function GithubProfileSearch() {
           <div style={{ marginTop: "40px" }}>
             <Back />
           </div>
-          <div className={styles["github-profile-container"]}>
+          {/* <div className={styles["github-profile-container"]}>
             <div className={styles["input-wrapper"]}>
               <input
                 type="text"
@@ -49,11 +49,11 @@ export default function GithubProfileSearch() {
                 placeholder="Search GitHub Username..."
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
-              />
+              /> 
               <button onClick={handleSubmit}>Search</button>
             </div>
           </div>
-          {userData !== null ? <User user={userData} /> : null}
+          {userData !== null ? <User user={userData} /> : null} */}
         </>
       )}
     </>
