@@ -14,7 +14,7 @@ export default function TreeView() {
   return (
     <div style={{display: "flex", gap: "10px"}}>
       <div className={styles["tree-view-container"]}>
-        <MenuList list={menusData} />
+        <MenuList list={menus} />
       </div>
       <div style={{marginTop: "95vh"}}>
       <Back/>
