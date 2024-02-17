@@ -38,10 +38,6 @@ export default function ProjectsPage() {
             <span className="num">7</span>
             <Link href="/theme-color">Theme Color</Link>
           </li>
-          {/* <li>
-            <span className="num">8</span>
-            <Link href="/github-profile-search">GitHub Profile Search</Link>
-          </li> */}
           <li>
             <span className="num">8</span>
             <Link href="/tic-tac-toe">Tic Tac Toe</Link>
