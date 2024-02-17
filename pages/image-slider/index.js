@@ -6,33 +6,8 @@ import sliderData from "@/data/slider-data";
 import Image from "next/image";
 
 export default function ImageSlider() {
-  // const [images, setImages] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
-  // const [errorMsg, setErrorMsg] = useState(null);
   const [loading, setLoading] = useState(false);
-
-  // const fetchImages = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       "https://picsum.photos/v2/list?page=1&limit=10"
-  //     );
-  //     const data = await response.json();
-  //     if (data) {
-  //       setImages(data);
-  //       setLoading(false);
-  //     }
-  //   } catch (ex) {
-  //     setErrorMsg(ex.message);
-  //     setLoading(false);
-  //   }
-  // };
-
-  // const handlePrevious = () => {
-  //   setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
-  // };
-  // const handleNext = () => {
-  //   setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
-  // };
 
   const handlePrevious = () => {
     setCurrentSlide(
@@ -45,15 +20,12 @@ export default function ImageSlider() {
     );
   };
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   if (images) fetchImages();
-  //   console.log(images);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
 
-  // if (errorMsg !== null) {
-  //   return <div>Error occured! {errorMsg}</div>;
-  // }
   return (
     <>
       {loading ? (
@@ -73,6 +45,8 @@ export default function ImageSlider() {
                     <Image
                       key={slider.id}
                       src={"/images/" + slider.image}
+                      width={600}
+                      height={600}
                       className={
                         currentSlide === index
                           ? styles["current-image"]

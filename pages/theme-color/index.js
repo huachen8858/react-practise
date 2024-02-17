@@ -6,11 +6,6 @@ import { useTheme } from "@/hooks/use-theme";
 import ThemeSwitch from "@/components/theme-switch";
 
 export default function LightDarkMode() {
-  // const [theme, setTheme] = useLocalStroage("theme", "dark");
-
-  // const handleToggleTheme = () => {
-  //   setTheme(theme === "light" ? "dark" : "light");
-  // };
   const { color } = useTheme();
 
   return (
@@ -19,13 +14,6 @@ export default function LightDarkMode() {
         {color ==="light" ? "Light Mode" : "Dark Mode"} <ThemeSwitch />
         <Back />
       </div>
-      {/*  <div className={styles["light-dark-mode"]}>
-      <div className={styles["container"]}>
-        <p>Hello World !</p>
-        <button onClick={handleToggleTheme}>Change Theme</button> 
-        <Back />
-      </div>
-    </div>*/}
     </>
   );
 }
