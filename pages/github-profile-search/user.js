@@ -4,22 +4,22 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function User({ user }) {
-  const {
-    avatar_url,
-    followers,
-    following,
-    public_repos,
-    name,
-    login,
-    created_at,
-  } = user;
-  const createdDate = new Date(created_at);
+  // const {
+  //   avatar_url,
+  //   followers,
+  //   following,
+  //   public_repos,
+  //   name,
+  //   login,
+  //   created_at,
+  // } = user;
+  // const createdDate = new Date(created_at);
 
   console.log(user);
 
   return (
     <div className={styles["user"]}>
-      <div>
+      {/* <div>
         <Image src={avatar_url} className={styles["avatar"]} alt="User" />
       </div>
       <div className={styles["name-container"]}>
@@ -44,7 +44,7 @@ export default function User({ user }) {
           <p>Following</p>
           <p>{following}</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
